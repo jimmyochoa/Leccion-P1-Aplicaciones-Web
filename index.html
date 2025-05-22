@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Conversor</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container d-flex justify-content-center pt-5">
+                <div class="card shadow" style="width: 24rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Conversor de Temperatura</h5>
+                        <img src="https://cdn-icons-png.freepik.com/512/434/434533.png" alt="referencia"
+                            class="d-block mx-auto rounded-2 mb-3" height="150">
+                        <form id="converterForm">
+                            <div class="mb-3">
+                                <label for="valorTemperatura" class="form-label">Temperatura</label>
+                                <input type="number" class="form-control" id="valorTemperatura"
+                                    placeholder="Ingresa un valor en °C o °F" required>
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-3">
+                                <button type="button" class="btn btn-primary" onclick="convertirAc()">Convertir a
+                                    °C</button>
+                                <button type="button" class="btn btn-danger" onclick="convertirAf()">Convertir a
+                                    °F</button>
+                            </div>
+
+                            <div id="resultado" class="alert alert-info mt-4 text-center d-none" role="alert"></div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section class="container mt-5">
+            <h6 class="text-center mb-3">Conversiones Comunes</h6>
+            <div class="table-responsive mb-5">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>°C</th>
+                            <th>°F</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>77</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>98.6</td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>212</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-light text-center py-3 fixed-bottom">
+        <div class="container">
+            <span>Creado por Jimmy Ochoa © 2025</span>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
